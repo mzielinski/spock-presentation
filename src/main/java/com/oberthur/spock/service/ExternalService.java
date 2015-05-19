@@ -6,5 +6,5 @@ import java.math.BigDecimal;
  * @author mzielinski on 18.05.15.
  */
 public interface ExternalService {
-    public abstract BigDecimal retrieveExchangeRate(String ccy);
+    BigDecimal retrieveExchangeRate(String ccy);
 }

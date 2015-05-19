@@ -1,6 +1,5 @@
 package com.oberthur.spock.service
 
-import com.oberthur.spock.service.StringService
 import spock.lang.Specification
 import spock.lang.Unroll
 
@@ -44,5 +43,22 @@ class StringServiceSpec extends Specification {
         where:
         [val1, val2, result] << lists
     }
+
+
+    def "should throw IllegalArgumentException when at least parameter is null"() {
+        when:
+        objectUnderTest.concat(val1, val2)
+
+        then:
+        def exception = thrown(IllegalArgumentException)
+        exception.message.contains("cannot be null")
+
+        where:
+        val1  | val2
+        "asd" | null
+        null  | "asd"
+        null  | null
+    }
+
 
 }

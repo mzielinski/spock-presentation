@@ -18,9 +18,6 @@ public class ExchangeRateService {
     }
 
     public BigDecimal exchangeRate(String ccy) {
-        if (ccy == null || "".equals(ccy)) {
-            throw new IllegalArgumentException("ccy cannot be null");
-        }
         return externalService.retrieveExchangeRate(ccy);
     }
 

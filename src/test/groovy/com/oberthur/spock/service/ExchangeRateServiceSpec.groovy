@@ -28,15 +28,6 @@ class ExchangeRateServiceSpec extends Specification {
         objectUnderTest.exchangeRate(PLN) == EXPECTED_EXCHANGE_RATE
     }
 
-    def "should throw IllegalArgumentException when currency is not set"() {
-        when:
-        objectUnderTest.exchangeRate(null)
-
-        then:
-        def exception = thrown(IllegalArgumentException)
-        exception.message.contains("cannot be null")
-    }
-
     def "should save exchange rate"() {
         when:
         objectUnderTest.save("PLN", BigDecimal.TEN)
