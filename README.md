@@ -1,3 +1,7 @@
+# Presentation
+
+http://slides.com/mzielinski/spock
+
 # StringServiceSpec
 
 1. Write simple test which concatenate two strings
@@ -17,3 +21,7 @@
 2. Create test which check IllegalArgumentException when there is no ccy
 
 3. Check execution of save method on DatabaseService and verify argument capture of ExchangeRate
+
+# BDD
+
+https://bitbucket.otlabs.fr/projects/UCP/repos/hce-microservices/browse/hce/hce-microservices-bdd-tests/src/test/resources/stories/users_api/ccapi_create_new_cc_user.story

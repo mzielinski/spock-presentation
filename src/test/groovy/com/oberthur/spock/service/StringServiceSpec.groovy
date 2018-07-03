@@ -13,7 +13,7 @@ class StringServiceSpec extends Specification {
     StringService objectUnderTest = new StringService()
 
     @Unroll
-    def "should concatenate #string1 and #string2 and return #result"() {
+    def "should concatenate #val1 and #val2 and return #result"() {
         expect:
         objectUnderTest.concat(val1, val2) == result
 
@@ -25,7 +25,7 @@ class StringServiceSpec extends Specification {
     }
 
     @Unroll
-    def "pipe line version - should concatenate #string1 and #string2 and return #result"() {
+    def "pipe line version - should concatenate #val1 and #val2 and return #result"() {
         expect:
         objectUnderTest.concat(val1, val2) == result
 

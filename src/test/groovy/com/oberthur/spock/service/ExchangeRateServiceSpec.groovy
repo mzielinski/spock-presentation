@@ -4,6 +4,7 @@ import com.oberthur.spock.model.ExchangeRate
 import com.oberthur.spock.service.DatabaseService
 import com.oberthur.spock.service.ExchangeRateService
 import com.oberthur.spock.service.ExternalService
+import groovy.transform.CompileStatic
 import spock.lang.Specification
 
 
